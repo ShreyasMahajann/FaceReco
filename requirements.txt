@@ -1,0 +1,4 @@
+django
+opencv-python
+djangorestframework
+django-cors-headers
