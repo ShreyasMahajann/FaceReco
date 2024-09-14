@@ -83,7 +83,8 @@ class VerificationView(APIView):
                 print(f"Request for Roll Number {roll} returns ---- {result} ---- added to {json_file} file")
                 current_datetime = datetime.now()
                 date_time_string = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-                response=request.get(f"http://localhost:8000/api/v1/users/cheatAttempt?rollNumber={roll}")
+                backend_url = os.environ.get('BACKEND')
+                response = request.get(f"{backend_url}api/v1/users/joawbasdjoahhabdjjosthqoibasdnasgoisbjdkawo?rollNumber={roll}")
                 with open(json_file, 'a') as json_file:
                     data = {
                         "roll": roll,
