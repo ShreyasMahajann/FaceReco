@@ -149,7 +149,7 @@ class VerificationView(APIView):
                     log_file.write(f"Verification failed for Roll {roll} at {date_time_string}\n")
 
             # Return the verification status
-            return Response({'verified': result}, status=status.HTTP_200_OK)
+            return Response({'verified': not result}, status=status.HTTP_200_OK)
 
         # If the serializer is invalid, return the errors
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
