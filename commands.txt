@@ -1,2 +1,2 @@
 docker build . -t facescanner
-docker run -d -p {port}:8888 -p {port}:4444 --name face {image_id}
+docker run -d -p 8888:8888 -p 4444:4444 --name face {image_id}
