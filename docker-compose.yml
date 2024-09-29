@@ -6,5 +6,6 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - .:/usr/src/app
+      - ./failed_results.json:./failed_results.json
+      - ./encodings:./encodings
     command: ["python", "manage.py", "runserver"]
